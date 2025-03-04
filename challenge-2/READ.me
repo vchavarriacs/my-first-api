@@ -1,0 +1,54 @@
+# Challenge 2: Adding Books with POST
+
+In this challenge, you’ll upgrade your API to accept new book "orders" via a POST request—like customers adding items to the restaurant menu! You’ll build on Challenge 1 by adding a new endpoint and updating the "database" file.
+
+## Setup
+
+1. Navigate to this folder:
+   ```bash
+   cd challenge-2
+
+Install dependencies:
+bash
+npm install
+
+
+Run the API:
+bash
+node server.js
+
+Try It Out
+Get Books: Visit http://localhost:3000/books in your browser to see the current list.
+
+Add a Book: Use one of these commands to add a new book:
+
+Using curl (Linux/Mac or Windows with curl installed):
+
+bash
+
+curl -X POST -H "Content-Type: application/json" -d '{"title":"1984","author":"George Orwell"}' http://localhost:3000/books
+
+Using PowerShell (Windows):
+
+powershell
+
+Collapse
+
+Wrap
+
+Invoke-WebRequest -Method POST -Uri "http://localhost:3000/books" -Headers @{ "Content-Type" = "application/json" } -Body '{"title":"1984","author":"George Orwell"}'
+After running, check books.json to see the new book added!
+
+Stop the Server: Press Ctrl + C in the terminal.
+
+Files
+books.json: The "database" file that stores books.
+server.js: The API code with GET and POST endpoints.
+package.json: Project setup and dependencies.
+
+What You’ll Learn
+Handling POST requests with Express.
+Updating a JSON file dynamically with Node.js.
+
+Next Steps
+Ready for more? Try Challenge 3 (coming soon) to connect your API to a real database!
